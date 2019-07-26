@@ -5,3 +5,7 @@ zf:
    - "8080:80"
   volumes:
    - .:/var/www
+mailhog:
+  image: mailhog/mailhog:latest
+  ports:
+    - "8025:8025"

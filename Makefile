@@ -23,6 +23,7 @@ up:
 	@echo "CMD: make up"
 	@echo "USAGE: brings docker-compose up "
 	docker-compose up -d --build
+	open http://localhost:8025/
 	open http://localhost:8080/
 down:
 	@echo "CMD: make down"
