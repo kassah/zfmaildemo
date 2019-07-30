@@ -7,6 +7,8 @@
 
 namespace Application;
 
+use Zend\Mail\Transport\Factory as MailTransportFactory;
+
 class Module
 {
     const VERSION = '3.0.3-dev';

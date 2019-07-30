@@ -9,7 +9,7 @@ namespace Application;
 
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
-use Zend\ServiceManager\Factory\InvokableFactory;
+use Zend\Mail\Transport\Factory as MailTransportFactory;
 
 return [
     'router' => [
@@ -38,7 +38,12 @@ return [
     ],
     'controllers' => [
         'factories' => [
-            Controller\IndexController::class => InvokableFactory::class,
+            Controller\IndexController::class => Factory\IndexControllerFactory::class,
+        ],
+    ],
+    'service_manager' => [
+        'factories' => [
+            MailTransportFactory::class => Factory\MailTransportServiceFactory::class,
         ],
     ],
     'view_manager' => [
